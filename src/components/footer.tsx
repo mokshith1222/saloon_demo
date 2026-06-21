@@ -38,7 +38,7 @@ export function Footer() {
               {["Home", "Services", "Gallery", "About", "Contact", "Book Appointment"].map((item) => (
                 <li key={item}>
                   <Link
-                    href={item === "Home" ? "/" : `/${item.toLowerCase().replace(" ", "-")}`}
+                    href={item === "Home" ? "/" : item === "Book Appointment" ? "/book" : `/${item.toLowerCase().replace(" ", "-")}`}
                     className="text-muted-foreground hover:text-gold-500 transition-colors"
                   >
                     {item}
